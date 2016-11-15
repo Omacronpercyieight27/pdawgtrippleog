@@ -1,0 +1,16 @@
+<div class='jumbotron center'>
+    <h1>Welcome to my Pinterested app</h1>
+    <p>Pretty cool, and oh so sexy?</p>
+    <br/>
+    <% if user_signed_in? %>
+        <%= link_to 'Pins', pins_path, class: 'btn btn-primary' %>
+        <%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-primary' %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+        
+    <% else %>
+        <%= link_to 'Login', new_user_session_path, class: 'btn btn-primary' %>
+        <%= link_to 'Join', new_user_registration_path, class: 'btn btn-primary' %>
+    <% end %>
+</div>
+
+
